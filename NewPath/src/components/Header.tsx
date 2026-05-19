@@ -1,5 +1,8 @@
 import { Link } from "react-router";
+// @ts-ignore
 import '../../styles/Components/header.css'
+
+// @ts-ignore
 import { useCart } from "./Cart/CartContext";
 import { CartModal } from "./Cart/CartModal";
 
@@ -22,8 +25,8 @@ export function Header() {
           </Link>
 
           <div className="cartBtnWrapper" onClick={() => setIsOpen(true)}>
-            <svg className="cartHeaderBtn" fill="#000000" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-              viewBox="704.081 796 200 200" enable-background="new 704.081 796 200 200" xml:space="preserve">
+            <svg className="cartHeaderBtn" fill="#000000" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink"
+              viewBox="704.081 796 200 200" enable-background="new 704.081 796 200 200" xmlSpace="preserve">
               <path d="M891.876,977.909l-6.938-125.811h-34.661v-10.157c0-25.333-20.608-45.941-45.94-45.941s-45.94,20.609-45.94,45.941v10.157
 	              h-36.161l-5.969,126.355l-0.006,0.219c-0.049,4.547,1.758,9.01,4.955,12.239c3.198,3.233,7.641,5.089,12.19,5.089h141.351
 	              c4.688,0,9.228-1.953,12.453-5.36C890.434,987.233,892.135,982.593,891.876,977.909z M770.379,841.941

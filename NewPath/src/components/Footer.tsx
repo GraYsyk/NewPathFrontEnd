@@ -1,3 +1,4 @@
+//@ts-ignore
 import '../../styles/Components/footer.css'
 
 export function Footer() {

@@ -1,0 +1,383 @@
+.adminCollection {
+  width: 100%;
+}
+
+/* CONTROLS */
+.collectionControls {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin-bottom: 28px;
+}
+
+.controlCard {
+  background: #fff;
+  border: 1px solid #ebebeb;
+  border-radius: 14px;
+  padding: 20px 24px;
+}
+
+.controlCard.wide {
+  grid-column: 1 / -1;
+}
+
+.controlLabel {
+  font-size: 13px;
+  font-weight: 600;
+  color: #111;
+  margin-bottom: 4px;
+}
+
+.controlSub {
+  font-size: 12px;
+  color: #999;
+}
+
+.controlRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+/* TOGGLE */
+.toggleBtn {
+  width: 48px;
+  height: 26px;
+  border-radius: 999px;
+  border: none;
+  cursor: pointer;
+  position: relative;
+  transition: background 0.2s;
+  flex-shrink: 0;
+}
+
+.toggleBtn.on { background: #22c55e; }
+.toggleBtn.off { background: #ccc; }
+
+.toggleThumb {
+  position: absolute;
+  top: 3px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #fff;
+  transition: left 0.2s;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.15);
+}
+
+.toggleBtn.on .toggleThumb { left: 25px; }
+.toggleBtn.off .toggleThumb { left: 3px; }
+
+/* DATE INPUT */
+.dateInput {
+  flex: 1;
+  padding: 8px 12px;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  font-size: 12px;
+  outline: none;
+  font-family: inherit;
+}
+
+.dateInput:focus { border-color: #6366f1; }
+
+.scheduleBtn {
+  padding: 8px 16px;
+  background: #111;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.15s;
+  font-family: inherit;
+}
+
+.scheduleBtn:hover { background: #333; }
+
+/* COLLECTION INFO */
+.controlFields {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 12px;
+}
+
+.collectionInput {
+  padding: 9px 14px;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  font-size: 13px;
+  outline: none;
+  font-family: inherit;
+}
+
+.collectionInput:focus { border-color: #6366f1; }
+
+.collectionTextarea {
+  padding: 9px 14px;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  font-size: 13px;
+  outline: none;
+  font-family: inherit;
+  resize: vertical;
+  min-height: 80px;
+}
+
+.collectionTextarea:focus { border-color: #6366f1; }
+
+.controlActions {
+  display: flex;
+  gap: 10px;
+  margin-top: 14px;
+}
+
+.saveLabelBtn {
+  padding: 9px 18px;
+  background: #f5f5f5;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  font-size: 12px;
+  font-weight: 600;
+  color: #444;
+  cursor: pointer;
+  font-family: inherit;
+  transition: background 0.15s;
+}
+
+.saveLabelBtn:hover { background: #ebebeb; }
+
+.releaseBtn {
+  padding: 9px 18px;
+  background: #e0e0e0;
+  border: none;
+  border-radius: 8px;
+  font-size: 12px;
+  font-weight: 600;
+  color: #aaa;
+  cursor: not-allowed;
+  font-family: inherit;
+  transition: all 0.15s;
+}
+
+.releaseBtn.active {
+  background: #6366f1;
+  color: #fff;
+  cursor: pointer;
+}
+
+.releaseBtn.active:hover { background: #4f46e5; }
+
+/* ITEMS */
+.collectionItemsHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+
+.collectionItemsTitle {
+  font-size: 16px;
+  font-weight: 600;
+  color: #111;
+}
+
+.addItemBtn {
+  padding: 9px 18px;
+  background: #111;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  font-family: inherit;
+  transition: background 0.15s;
+}
+
+.addItemBtn:hover { background: #333; }
+
+.collectionEmpty {
+  text-align: center;
+  padding: 60px 20px;
+  color: #aaa;
+  font-size: 14px;
+  background: #fff;
+  border: 1px solid #ebebeb;
+  border-radius: 14px;
+}
+
+.collectionItemsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 16px;
+}
+
+.collectionItemCard {
+  background: #fff;
+  border: 1px solid #ebebeb;
+  border-radius: 14px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.collectionItemImg {
+  width: 100%;
+  height: 240px;
+  object-fit: cover;
+  background: #f5f5f5;
+}
+
+.collectionItemInfo {
+  padding: 12px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  flex: 1;
+}
+
+.collectionItemName {
+  font-size: 14px;
+  font-weight: 600;
+  color: #111;
+}
+
+.collectionItemPrice {
+  font-size: 13px;
+  color: #444;
+}
+
+.collectionItemStock {
+  font-size: 11px;
+  font-weight: 600;
+  margin-top: 4px;
+}
+
+.collectionItemStock.inStock { color: #22c55e; }
+.collectionItemStock.outOfStock { color: #ef4444; }
+
+.collectionItemActions {
+  display: flex;
+  gap: 6px;
+  padding: 10px 16px;
+  border-top: 1px solid #f5f5f5;
+}
+
+.itemActionBtn {
+  flex: 1;
+  padding: 7px 0;
+  border: 1px solid #e0e0e0;
+  border-radius: 7px;
+  font-size: 11px;
+  font-weight: 600;
+  background: #fff;
+  color: #444;
+  cursor: pointer;
+  font-family: inherit;
+  transition: all 0.15s;
+}
+
+.itemActionBtn:hover { background: #f5f5f5; }
+.itemActionBtn.view { color: #6366f1; border-color: #e0e7ff; }
+.itemActionBtn.view:hover { background: #eef2ff; }
+.itemActionBtn.delete { color: #ef4444; border-color: #fecaca; }
+.itemActionBtn.delete:hover { background: #fee2e2; }
+
+
+.collectionItemImgWrapper {
+  position: relative;
+}
+
+.deletedOverlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0;
+}
+
+.deletedOverlay span {
+  color: #fff;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  background: rgba(0,0,0,0.4);
+  padding: 6px 14px;
+  border-radius: 20px;
+}
+
+.deletedCard {
+  opacity: 0.7;
+  border-color: #f0f0f0;
+}
+
+.itemActionBtn.restore {
+  color: #22c55e;
+  border-color: #bbf7d0;
+}
+
+.itemActionBtn.restore:hover {
+  background: #f0fdf4;
+}
+
+.collectionItemsHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 16px;
+  gap: 12px;
+}
+
+.collectionItemsControls {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.itemsSearch {
+  padding: 8px 14px;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  font-size: 12px;
+  outline: none;
+  font-family: inherit;
+  width: 200px;
+}
+
+.itemsSearch:focus {
+  border-color: #6366f1;
+}
+
+.itemsFilterTabs {
+  display: flex;
+  background: #f5f5f5;
+  border-radius: 8px;
+  padding: 3px;
+  gap: 2px;
+}
+
+.filterTab {
+  padding: 5px 14px;
+  border: none;
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: 500;
+  color: #888;
+  background: transparent;
+  cursor: pointer;
+  font-family: inherit;
+  transition: all 0.15s;
+}
+
+.filterTab.active {
+  background: #fff;
+  color: #111;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}

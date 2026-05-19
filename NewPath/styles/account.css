@@ -1,0 +1,304 @@
+.accountMain {
+  position: relative;
+  z-index: 1;
+  background-color: white;
+  min-height: 80vh;
+  box-shadow: 0px 15px 20px -5px rgba(0, 0, 0, 0.4);
+}
+
+.accountContainer {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 60px 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.accountHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.accountTitle {
+  font-size: 48px;
+  font-family: Helvetica, Arial;
+  font-weight: 700;
+  margin: 0;
+}
+
+.logoutBtn {
+  background: none;
+  border: 1px solid black;
+  padding: 10px 24px;
+  border-radius: 20px;
+  font-size: 12px;
+  letter-spacing: 0.1em;
+  cursor: pointer;
+}
+
+.logoutBtn:hover {
+  background: black;
+  color: white;
+}
+
+.accountGrid {
+  display: flex;
+  gap: 60px;
+  align-items: flex-start;
+}
+
+.accountSection {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.accountDetailSection {
+  flex: 1;
+  position: sticky;
+  top: 20px;
+}
+
+.sectionTitle {
+  font-size: 11px;
+  letter-spacing: 0.15em;
+  color: #000000;
+  font-family: Helvetica;
+  margin: 0 0 16px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid #f0f0f0;
+  font-weight: 400;
+}
+
+.orderCard {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  padding: 20px 0;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.orderImg {
+  width: 70px;
+  height: 85px;
+  object-fit: cover;
+  background: #f2f1ef;
+  flex-shrink: 0;
+}
+
+.orderInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  flex: 1;
+}
+
+.orderId {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.orderDate, .orderItems {
+  font-size: 13px;
+  color: #888;
+}
+
+.orderTotal {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.orderRight {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 10px;
+  margin-left: auto;
+}
+
+.orderStatus {
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  padding: 4px 12px;
+  border-radius: 20px;
+}
+
+.orderStatus.shipped {
+  background: #f0f7ff;
+  color: #2563eb;
+}
+
+.orderStatus.delivered {
+  background: #f0fdf4;
+  color: #16a34a;
+}
+
+.orderStatus.cancelled {
+  background: #fef2f2;
+  color: #dc2626;
+}
+
+.orderAgainBtn {
+  background: none;
+  border: 1px solid #ddd;
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  cursor: pointer;
+}
+
+.orderAgainBtn:hover {
+  border-color: black;
+}
+
+.accountDetails {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.detailGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.detailLabel {
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  color: #888;
+}
+
+.detailValue {
+  font-size: 14px;
+}
+
+.editDetailsBtn {
+  width: fit-content;
+  background: black;
+  color: white;
+  border: none;
+  padding: 12px 28px;
+  border-radius: 20px;
+  font-size: 12px;
+  letter-spacing: 0.1em;
+  cursor: pointer;
+  margin-top: 8px;
+}
+
+.editDetailsBtn:hover {
+  background: #333;
+}
+
+.accountEmpty {
+  font-size: 13px;
+  color: #888;
+}
+
+.detailInput {
+  width: 100%;
+  padding: 8px 14px;
+  border: 1px solid #ddd;
+  border-radius: 20px;
+  font-size: 14px;
+  font-family: Helvetica, Arial;
+  outline: none;
+  box-sizing: border-box;
+  transition: border-color 0.2s ease;
+}
+
+.detailInput:focus {
+  border-color: black;
+}
+
+.detailBtns {
+  display: flex;
+  gap: 10px;
+}
+
+.cancelDetailsBtn {
+  background: none;
+  border: 1px solid #ddd;
+  padding: 12px 28px;
+  border-radius: 20px;
+  font-size: 12px;
+  letter-spacing: 0.1em;
+  cursor: pointer;
+}
+
+.cancelDetailsBtn:hover {
+  border-color: black;
+}
+
+@media (max-width: 768px) {
+  .accountContainer {
+    padding: 30px 16px;
+    gap: 24px;
+  }
+
+  .accountTitle {
+    font-size: 28px;
+  }
+
+  .logoutBtn {
+    padding: 8px 16px;
+    font-size: 11px;
+    white-space: nowrap;
+  }
+
+  .accountGrid {
+    flex-direction: column;
+    gap: 32px;
+  }
+
+  .accountDetailSection {
+    position: static;
+    width: 100%;
+  }
+
+  .accountSection {
+    width: 100%;
+  }
+
+  .orderCard {
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  .orderRight {
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 0;
+  }
+
+  .orderInfo {
+    flex: 1;
+    min-width: 0;
+  }
+
+  .orderItems {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .editDetailsBtn {
+    width: 100%;
+    text-align: center;
+  }
+
+  .detailBtns {
+    flex-direction: column;
+  }
+
+  .cancelDetailsBtn {
+    width: 100%;
+    text-align: center;
+  }
+}

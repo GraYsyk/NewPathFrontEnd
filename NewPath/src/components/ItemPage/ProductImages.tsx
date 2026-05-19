@@ -1,13 +1,15 @@
 import { Swiper, SwiperSlide } from 'swiper/react'
 import { Thumbs, Navigation } from 'swiper/modules'
+import type { Swiper as SwiperType } from 'swiper';
 import 'swiper/css'
 import 'swiper/css/thumbs'
 import 'swiper/css/navigation'
+//@ts-ignore
 import '../../../styles/Components/itemPage/itemPage.css'
 import { useState } from 'react'
 
-export function ProductImages({ images }) {
-  const [thumbsSwiper, setThumbsSwiper] = useState(null);
+export function ProductImages({images}: {images: string[]}) {
+  const [thumbsSwiper, setThumbsSwiper] = useState<SwiperType | null>(null);
 
   return (
     <div className="productImages">

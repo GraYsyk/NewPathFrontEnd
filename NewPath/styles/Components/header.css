@@ -49,3 +49,28 @@
   align-items: center;
   justify-content: center;
 }
+
+@media (max-width: 768px) {
+  .header {
+    height: 100px;
+    padding: 0 16px;
+  }
+
+  .logoHeader {
+    height: 60px;
+  }
+
+  .accountBtn, .cartHeaderBtn {
+    width: 22px;
+    height: 22px;
+    padding: 10px;
+  }
+
+  .cartHeaderCount {
+    top: 14px;
+    left: 14px;
+    width: 15px;
+    height: 15px;
+    font-size: 9px;
+  }
+}
